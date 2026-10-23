@@ -1,0 +1,5 @@
+{
+  "name": "claude-mods",
+  "owner": { "name": "Emil-Ant" },
+  "plugins": [{ "name": "heading-colour", "source": "./heading-colour" }]
+}
