@@ -3,6 +3,7 @@
   "owner": { "name": "Emil-Ant" },
   "plugins": [
     { "name": "heading-colour", "source": "./heading-colour" },
-    { "name": "prompt-colour", "source": "./prompt-colour" }
+    { "name": "prompt-colour", "source": "./prompt-colour" },
+    { "name": "hide-turn-duration", "source": "./hide-turn-duration" }
   ]
 }
