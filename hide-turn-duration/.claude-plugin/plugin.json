@@ -1,0 +1,1 @@
+{ "name": "hide-turn-duration", "version": "0.1.1", "description": "Hides the line that closes each turn (Cogitated for 7s) outside the ctrl+o transcript" }
