@@ -5,7 +5,8 @@ export const register: Register = on => {
     // ctrl+o and --verbose keep the line, as do waits on background agents
     if (e.props.isExpanded || e.props.waitingFor) return next(e)
 
-    const { Box } = $.ui.resolve(e)
-    return <Box />
+    // a blank row keeps the gap above the next prompt
+    const { Text } = $.ui.resolve(e)
+    return <Text> </Text>
   })
 }
