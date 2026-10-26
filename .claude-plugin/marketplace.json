@@ -1,5 +1,8 @@
 {
   "name": "claude-mods",
   "owner": { "name": "Emil-Ant" },
-  "plugins": [{ "name": "heading-colour", "source": "./heading-colour" }]
+  "plugins": [
+    { "name": "heading-colour", "source": "./heading-colour" },
+    { "name": "prompt-colour", "source": "./prompt-colour" }
+  ]
 }
