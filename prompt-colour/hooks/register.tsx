@@ -15,9 +15,15 @@ export const register: Register = on => {
           </Text>
         </Box>
         <Box flexDirection="column" flexGrow={1}>
-          <Text color={PROMPT_COLOUR}>{e.props.text}</Text>
+          <Text color={PROMPT_COLOUR} italic>{e.props.text}</Text>
         </Box>
       </Box>
     )
+  })
+
+  // paint the draft in the prompt box the same colour, upright
+  on('prompt.edit', async ($, e, next) => {
+    const r = await next(e)
+    return { ...r, decorations: [...(r.decorations ?? []), { start: 0, end: r.text.length, color: PROMPT_COLOUR }] }
   })
 }

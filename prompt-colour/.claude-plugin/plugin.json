@@ -1,1 +1,1 @@
-{ "name": "prompt-colour", "version": "0.1.0", "description": "Draws your own prompts in the transcript in bright magenta" }
+{ "name": "prompt-colour", "version": "0.2.0", "description": "Draws your own prompts in the transcript in bright magenta italic, and colours the prompt box draft to match" }

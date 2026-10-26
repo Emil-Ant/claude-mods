@@ -8,7 +8,7 @@ Draws headings in Claude's replies (`## Title` lines, and lines that are only `*
 
 ## prompt-colour
 
-Draws your own prompts in the transcript in bright magenta, so they stand apart from Claude's replies and from the cyan headings. Change `PROMPT_COLOUR` in `prompt-colour/hooks/register.tsx` for another colour.
+Draws your own prompts in the transcript in bright magenta italic, so they stand apart from Claude's replies and from the cyan headings. The draft you type in the prompt box takes the same magenta, without the italic. Change `PROMPT_COLOUR` in `prompt-colour/hooks/register.tsx` for another colour.
 
 ## hide-turn-duration
 
