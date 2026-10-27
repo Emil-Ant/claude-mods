@@ -38,11 +38,21 @@ export const register: Register = on => {
   // paint the draft in the prompt box the same colour, upright, with the command in its own colour
   on('prompt.edit', async ($, e, next) => {
     const r = await next(e)
-    const cmd = commandLength(r.text)
-    const mine = [
-      { start: 0, end: cmd, color: COMMAND_COLOUR, bold: true },
-      { start: cmd, end: r.text.length, color: PROMPT_COLOUR },
-    ]
-    return { ...r, decorations: [...(r.decorations ?? []), ...mine] }
+    return { ...r, decorations: [...(r.decorations ?? []), ...draftDecorations(r.text)] }
   })
+
+  // a draft put back without typing (Escape, history, undo, a fill) skips prompt.edit, so paint it here
+  on('prompt.change', async ($, e, next) => {
+    const r = await next(e)
+    if (r.text.length > 0) await $.prompt.paint({ text: r.text, decorations: draftDecorations(r.text) })
+    return r
+  })
+}
+
+const draftDecorations = (text: string) => {
+  const cmd = commandLength(text)
+  return [
+    { start: 0, end: cmd, color: COMMAND_COLOUR, bold: true },
+    { start: cmd, end: text.length, color: PROMPT_COLOUR },
+  ]
 }
