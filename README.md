@@ -33,5 +33,3 @@ claude plugin install hide-turn-duration --marketplace Emil-Ant/claude-mods
 ```
 
 In the desktop app: click + next to the prompt box, then Plugins, Add marketplace with `Emil-Ant/claude-mods`, then Add plugin.
-
-This repository is private. The install works only on machines with a GitHub credential that can read it (an SSH key, or `gh auth login` then `gh auth setup-git`).
